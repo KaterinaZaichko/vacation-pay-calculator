@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vacation payments calculator</title>
+</head>
+<body>
+<form method="GET" action="/calculate">
+    <label for="averageSalary">Average salary for 12 months</label>
+    <input type="number" name="averageSalary" id="averageSalary"/>
+    <br/>
+    <label for="startDateOfVacation">Vacation start date</label>
+    <input type="date" name="startDateOfVacation" id="startDateOfVacation"/>
+    <br/>
+    <label for="endDateOfVacation">Vacation end date</label>
+    <input type="date" name="endDateOfVacation" id="endDateOfVacation"/>
+    <br/>
+    <input type="submit" value="Calculate"/>
+</form>
+<div>
+    <p> Your vacation payments is </p>
+    <p th:text="${vacationPayments}"></p>
+</div>
+
+</body>
+</html>
